@@ -122,10 +122,12 @@
 			<div class="row g-4">
 
 				<div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="0">
-					<div class="product-card">
+					<div class="product-card product-card--clickable"
+						data-img="assets/kombucha.jpg"
+						data-name="Kombucha"
+						data-desc="Naturally fermented tea, lightly fizzy and refreshing.">
 						<div class="product-image-wrap">
-							<img class="product-image" src="assets/kombucha.jpg"
-								alt="Kombucha" loading="lazy">
+							<img class="product-image" src="assets/kombucha.jpg" alt="Kombucha" loading="lazy">
 						</div>
 						<div class="product-body">
 							<h3 class="product-header">Kombucha</h3>
@@ -134,12 +136,13 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-4" data-aos="fade-up"
-					data-aos-delay="100">
-					<div class="product-card">
+				<div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="product-card product-card--clickable"
+						data-img="assets/tepache.jpg"
+						data-name="Tepache"
+						data-desc="Pineapple-based ferment with warm spice notes.">
 						<div class="product-image-wrap">
-							<img class="product-image" src="assets/tepache.jpg" alt="Tepache"
-								loading="lazy">
+							<img class="product-image" src="assets/tepache.jpg" alt="Tepache" loading="lazy">
 						</div>
 						<div class="product-body">
 							<h3 class="product-header">Tepache</h3>
@@ -148,27 +151,28 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-4" data-aos="fade-up"
-					data-aos-delay="100">
-					<div class="product-card">
+				<div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="product-card product-card--clickable"
+						data-img="assets/Ragi.jpeg"
+						data-name="Ragi Hot Chocolate"
+						data-desc="Sprouted Ragi with unsweetened coco powder.">
 						<div class="product-image-wrap">
-							<img class="product-image" src="assets/Ragi.jpeg"
-								alt="RagiHotChoco" loading="lazy">
+							<img class="product-image" src="assets/Ragi.jpeg" alt="Ragi Hot Chocolate" loading="lazy">
 						</div>
 						<div class="product-body">
 							<h3 class="product-header">Ragi Hot Chocolate</h3>
-							<p class="product-description">Sprouted Ragi with unsweatened
-								coco powder</p>
+							<p class="product-description">Sprouted Ragi with unsweetened coco powder.</p>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-4" data-aos="fade-up"
-					data-aos-delay="100">
-					<div class="product-card">
+				<div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="product-card product-card--clickable"
+						data-img="assets/Choco-Granola.jpeg"
+						data-name="Chocolate Granola"
+						data-desc="More than a cereal. It's a habit upgrade.">
 						<div class="product-image-wrap">
-							<img class="product-image" src="assets/Choco-Granola.jpeg"
-								alt="ChocoGranola" loading="lazy">
+							<img class="product-image" src="assets/Choco-Granola.jpeg" alt="Chocolate Granola" loading="lazy">
 						</div>
 						<div class="product-body">
 							<h3 class="product-header">Chocolate Granola</h3>
@@ -177,18 +181,17 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6 col-md-4" data-aos="fade-up"
-					data-aos-delay="100">
-					<div class="product-card">
+				<div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="product-card product-card--clickable"
+						data-img="assets/DFLadoo.png"
+						data-name="Dry Fruits Ladoo"
+						data-desc="A nutrient-dense, handcrafted ladoo packed with premium nuts and natural dates for a guilt-free energy boost in every bite.">
 						<div class="product-image-wrap">
-							<img class="product-image" src="assets/DFLadoo.png"
-								alt="DryFruitsLadoo" loading="lazy">
+							<img class="product-image" src="assets/DFLadoo.png" alt="Dry Fruits Ladoo" loading="lazy">
 						</div>
 						<div class="product-body">
 							<h3 class="product-header">Dry Fruits Ladoo</h3>
-							<p class="product-description">A nutrient-dense, handcrafted ladoo packed with premium
-								nuts and natural dates for a guilt-free energy boost in every
-								bite.</p>
+							<p class="product-description">A nutrient-dense, handcrafted ladoo packed with premium nuts and natural dates for a guilt-free energy boost in every bite.</p>
 						</div>
 					</div>
 				</div>
@@ -228,6 +231,20 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- PRODUCT MODAL -->
+	<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content product-modal-content">
+				<button type="button" class="product-modal-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+				<img id="modalImg" src="" alt="" class="product-modal-img">
+				<div class="product-modal-body">
+					<h3 id="modalName" class="product-modal-name"></h3>
+					<p id="modalDesc" class="product-modal-desc"></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- FOOTER -->
 	<footer>

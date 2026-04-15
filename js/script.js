@@ -31,5 +31,18 @@ function setActiveTab() {
 window.addEventListener('scroll', setActiveTab, { passive: true });
 setActiveTab();
 
+// Product modal
+const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+
+document.querySelectorAll('.product-card--clickable').forEach(card => {
+	card.addEventListener('click', () => {
+		document.getElementById('modalImg').src = card.dataset.img;
+		document.getElementById('modalImg').alt = card.dataset.name;
+		document.getElementById('modalName').textContent = card.dataset.name;
+		document.getElementById('modalDesc').textContent = card.dataset.desc;
+		productModal.show();
+	});
+});
+
 // AOS init
 AOS.init({ once: true });
