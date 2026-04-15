@@ -18,10 +18,6 @@ h1, h2, h3 {
 	font-family: 'Playfair Display', serif;
 }
 
-.colourClay {
-	color: var(--clay);
-}
-
 /* NAVBAR */
 .navbar {
 	background-color: var(--cream);
@@ -158,6 +154,19 @@ section>.container {
 	border-radius: 0.75rem;
 	margin-bottom: 1rem;
 }
+
+
+.product-header {
+	font-style: italic;
+	color: var(--clay);
+}
+
+.product-description {
+	font-style: italic;
+	opacity: 0.5;
+}
+
+
 
 /* CONTACT */
 .contact {
