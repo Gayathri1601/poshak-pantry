@@ -18,6 +18,10 @@ h1, h2, h3 {
 	font-family: 'Playfair Display', serif;
 }
 
+.colourClay {
+	color: var(--clay);
+}
+
 /* NAVBAR */
 .navbar {
 	background-color: var(--cream);
@@ -60,14 +64,44 @@ section {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
+	position: relative;
+	overflow: hidden;
+	scroll-margin-top: 60px;
 }
 
-section > .container {
+section>.container {
 	width: 100%;
 }
 
-/* HERO */
+/* CORNER DECORATIONS */
+.corner-deco {
+	position: absolute;
+	width: 120px;
+	opacity: 0.5;
+	pointer-events: none;
+}
 
+.corner-deco--tl {
+	top: 1.5rem;
+	left: 1.5rem;
+}
+
+.corner-deco--tr {
+	top: 1.5rem;
+	right: 1.5rem;
+}
+
+.corner-deco--bl {
+	bottom: 1.5rem;
+	left: 1.5rem;
+}
+
+.corner-deco--br {
+	bottom: 1.5rem;
+	right: 1.5rem;
+}
+
+/* HERO */
 .hero-tagline {
 	letter-spacing: 0.15em;
 	font-size: 0.75rem;
@@ -80,6 +114,10 @@ section > .container {
 	padding: 2rem;
 	text-align: center;
 	max-width: 80%;
+}
+
+.section-header {
+	color: var(--maroon);
 }
 
 .hero-image img {
@@ -114,7 +152,7 @@ section > .container {
 
 .product-image {
 	height: 160px;
-	width: 250px;
+	width: 100%;
 	object-fit: cover;
 	background: #E6E1D8;
 	border-radius: 0.75rem;
@@ -124,6 +162,15 @@ section > .container {
 /* CONTACT */
 .contact {
 	background: rgba(255, 255, 255, 0.4);
+	min-height: unset;
+	padding: 16rem 1rem;
+}
+
+/* ABOUT */
+.aboutUs {
+	background: rgba(255, 255, 255, 0.4);
+	min-height: unset;
+	padding: 13rem 1rem;
 }
 
 /* FOOTER */
