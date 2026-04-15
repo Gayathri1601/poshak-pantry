@@ -57,15 +57,16 @@ h1, h2, h3 {
 /* SECTIONS */
 section {
 	padding: 5rem 1rem;
-}
-
-/* HERO */
-#hero {
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 }
 
+section > .container {
+	width: 100%;
+}
+
+/* HERO */
 
 .hero-tagline {
 	letter-spacing: 0.15em;
