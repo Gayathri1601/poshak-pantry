@@ -60,7 +60,7 @@ h1, h2, h3 {
 
 /* SECTIONS */
 section {
-	padding: 5rem 1rem;
+	padding: 0rem 1rem;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -92,12 +92,12 @@ section>.container {
 }
 
 .corner-deco--bl {
-	bottom: 1.5rem;
+	bottom: 5rem;
 	left: 1.5rem;
 }
 
 .corner-deco--br {
-	bottom: 1.5rem;
+	bottom: 5rem;
 	right: 1.5rem;
 }
 
@@ -162,15 +162,11 @@ section>.container {
 /* CONTACT */
 .contact {
 	background: rgba(255, 255, 255, 0.4);
-	min-height: unset;
-	padding: 16rem 1rem;
 }
 
 /* ABOUT */
 .aboutUs {
 	background: rgba(255, 255, 255, 0.4);
-	min-height: unset;
-	padding: 13rem 1rem;
 }
 
 /* FOOTER */

@@ -7,25 +7,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	});
 });
 
-// Scroll spy — highlight active tab based on visible section
-const sections = ['hero', 'products', 'contact'];
+// Scroll spy — highlight active tab based on scroll position
+const sections = ['hero', 'aboutUs', 'products', 'contact'];
 const tabs = document.querySelectorAll('.nav-tab');
 
-const observer = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			const id = entry.target.id;
-			tabs.forEach(tab => {
-				tab.classList.toggle('active', tab.dataset.section === id);
-			});
+function setActiveTab() {
+	const navHeight = document.getElementById('mainNav').offsetHeight;
+	const scrollPos = window.scrollY + navHeight + 10;
+
+	let current = sections[0];
+	sections.forEach(id => {
+		const el = document.getElementById(id);
+		if (el && el.offsetTop <= scrollPos) {
+			current = id;
 		}
 	});
-}, { threshold: 0.4 });
 
-sections.forEach(id => {
-	const el = document.getElementById(id);
-	if (el) observer.observe(el);
-});
+	tabs.forEach(tab => {
+		tab.classList.toggle('active', tab.dataset.section === current);
+	});
+}
+
+window.addEventListener('scroll', setActiveTab, { passive: true });
+setActiveTab();
 
 // AOS init
 AOS.init({ once: true });
