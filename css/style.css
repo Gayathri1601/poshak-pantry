@@ -216,6 +216,13 @@ section>.container {
 	margin-bottom: 0.5rem;
 }
 
+.product-modal-short {
+	color: var(--clay);
+	font-size: 0.9rem;
+	font-style: italic;
+	margin-bottom: 0.5rem;
+}
+
 .product-modal-desc {
 	color: var(--brown);
 	font-size: 0.9rem;

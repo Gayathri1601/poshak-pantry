@@ -39,6 +39,7 @@ document.querySelectorAll('.product-card--clickable').forEach(card => {
 		document.getElementById('modalImg').src = card.dataset.img;
 		document.getElementById('modalImg').alt = card.dataset.name;
 		document.getElementById('modalName').textContent = card.dataset.name;
+		document.getElementById('modalShort').textContent = card.querySelector('.product-description').textContent;
 		document.getElementById('modalDesc').textContent = card.dataset.desc;
 		productModal.show();
 	});
