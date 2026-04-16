@@ -1,9 +1,16 @@
-// Smooth scroll
+// Smooth scroll + close mobile menu on link click
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function(e) {
 		e.preventDefault();
-		document.querySelector(this.getAttribute('href'))
-			.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		const target = document.querySelector(this.getAttribute('href'));
+		const navHeight = document.getElementById('mainNav').offsetHeight;
+		const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
+		window.scrollTo({ top, behavior: 'smooth' });
+
+		const navMenu = document.getElementById('navMenu');
+		if (navMenu.classList.contains('show')) {
+			bootstrap.Collapse.getInstance(navMenu).hide();
+		}
 	});
 });
 
